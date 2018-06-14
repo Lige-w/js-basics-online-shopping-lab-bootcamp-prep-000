@@ -48,7 +48,7 @@ function removeFromCart(item) {
     var itemIndex = itemArray.indexOf(item)
   }
     if (itemIndex > -1) {
-      cart.splice(itemIndex, 1)
+      cart.splice([itemIndex], 1)
       return cart
    } else {
      return `That item is not in your cart.`
