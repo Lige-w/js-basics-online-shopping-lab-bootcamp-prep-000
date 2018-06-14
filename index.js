@@ -47,7 +47,7 @@ function removeFromCart(item) {
     itemArray = cart[i].itemName
     var itemIndex = itemArray.indexOf(item)
   }
-    if (itemIndex > -1) {
+    if ([itemIndex] > -1) {
       cart.splice([itemIndex], 1)
       return cart
    } else {
