@@ -42,13 +42,17 @@ function total() {
 }
 
 function removeFromCart(item) {
+  var itemArray = []
   for (var i = 0; i < cart.length; i++) {
-    if (cart[i].indexOf(item) > -1) {
-        cart.splice(i, 1);
-        return cart;
-     } else {
-       return `That item is not in your cart.`
-     }
+    itemArray = cart[i].itemName
+    var itemIndex = itemArray.indexOf(item)
+  }
+    if (itemIndex > -1) {
+      cart.splice(itemIndex, 1)
+      return cart 
+   } else {
+     return `That item is not in your cart.`
+   }
   }
 }
 
