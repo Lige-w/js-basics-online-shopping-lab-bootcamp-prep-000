@@ -44,12 +44,13 @@ function total() {
 function removeFromCart(item) {
   var itemArray = []
   for (var i = 0; i < cart.length; i++) {
-    itemArray = cart[i].itemName
-    var itemIndex = itemArray.indexOf(item)
+    itemArray.push(cart[i].itemName)
+    
   }
-    if ([itemIndex] > -1) {
-      cart.splice([itemIndex], 1)
-      return cart
+  var itemIndex = itemArray.indexOf(item)
+  if ([itemIndex] > -1) {
+     cart.splice([itemIndex], 1)
+     return cart
    } else {
      return `That item is not in your cart.`
    }
