@@ -45,7 +45,7 @@ function removeFromCart(item) {
   var itemArray = []
   for (var i = 0; i < cart.length; i++) {
     itemArray.push(cart[i].itemName)
-    
+
   }
   var itemIndex = itemArray.indexOf(item)
   if ([itemIndex] > -1) {
